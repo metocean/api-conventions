@@ -2,18 +2,18 @@
 Specification for REST API query components
 
 ##Time selection
-Time range
+###Time range
 
 ##Time interpolation
-Time
-Time series
+###Time
+###Time series
 
 ##Geographical selection
-Bounding box
-Point and radius
+###Bounding box
+###Point and radius
 
 ##Geographical interpolation
-Point
-Series of points
-Trajectory
-Grid
+###Point
+###Series of points
+###Trajectory
+###Grid
