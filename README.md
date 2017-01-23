@@ -18,6 +18,8 @@ Interpolate for a regularly spaced time series
 Select by bounding box
 ###Point and radius
 Select by point and radius
+###Level
+Select by level
 
 ##Geographical extraction/interpolation
 ###Point
@@ -28,3 +30,5 @@ Interpolate onto series of points
 Interpolate onto a trajectory
 ###Grid
 Interpolate onto a grid
+###Level interpolation
+Interpolate onto a level
