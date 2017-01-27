@@ -1,5 +1,5 @@
 # api-conventions
-Specification for REST API query components
+# Query components
 
 ##Time selection
 ###Time range
@@ -13,25 +13,26 @@ time=2007-03-01T13:00:00Z/2008-05-11T15:30:00Z
 ##Time interpolation
 ###Time
 Interpolate for single time
-time={ISO8601 time}
-Example: 
 ```
+time={ISO8601 time}
+E.g: 
 time=2007-03-01T13:00:00Z
 ```
+
 ###Times
 Interpolate for a series of discrete times
-times={ISO8601 times}
-Example: 
 ```
+times={ISO8601 times}
+E.g:
 times=2007-03-01T13:00:00Z,2008-05-11T15:30:00Z
 ```
 
 ###Time series
 Interpolate for a regularly spaced time series
 Time range with interval
-time={ISO8601 time range}&interval={ISO8601 duration}
-Example: 
 ```
+time={ISO8601 time range}&interval={ISO8601 duration}
+E.g.:
 time=2007-03-01T13:00:00Z/2008-05-11T15:30:00Z&interval=PT3H
 ```
 
