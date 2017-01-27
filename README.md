@@ -22,7 +22,7 @@ time=2007-03-01T13:00:00Z
 ###Times
 Interpolate for a series of discrete times
 ```
-times={ISO8601 times}
+times=[ISO8601 times]
 E.g:
 times=2007-03-01T13:00:00Z,2008-05-11T15:30:00Z
 ```
@@ -65,7 +65,7 @@ lon=165.5&lat=-34.5
 ###Series of points
 Interpolate onto series of points
 ```
-lons={decimal longitudes}&lats={decimal latitiude}
+lons=[decimal longitudes]&lats=[decimal latitiude]
 E.g.:
 lons=165.5,170.2,180.4&lats=-34.5,-36.0,-40.2
 ```
@@ -73,7 +73,7 @@ lons=165.5,170.2,180.4&lats=-34.5,-36.0,-40.2
 ###Trajectory
 Interpolate onto a trajectory
 ```
-lons={decimal longitudes}&lats={decimal latitudes}&times={ISO8601 times}
+lons=[decimal longitudes]&lats=[decimal latitudes]&times=[ISO8601 times]
 E.g.:
 lons=165.5,170.2,180.4&lats=-34.5,-36.0,-40.2&times=2013-01-05T00:00:00Z,2013-01-05T00:06:00Z,2013-01-05T00:12:00Z
 ```
