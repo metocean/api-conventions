@@ -48,9 +48,9 @@ bbox=165.0,-40.0,180.0,-35.0
 ###Point and radius
 Select by point and radius
 ```
-lon={decimal longitude}&lat={decimal latitiude}&radius
+lon={decimal longitude}&lat={decimal latitiude}&radius={radius in meters}
 E.g.:
-lon=165.5&lat=-34.5
+lon=165.5&lat=-34.5&radius=10000
 ```
 
 ##Geographical extraction/interpolation
