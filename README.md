@@ -4,9 +4,9 @@ Specification for REST API query components
 ##Time selection
 ###Time range
 Select by time range
-time={ISO8601 time range}
-Example: 
 ```
+time={ISO8601 time range}
+E.g.
 time=2007-03-01T13:00:00Z/2008-05-11T15:30:00Z
 ```
 
