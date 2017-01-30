@@ -5,9 +5,9 @@ This follows http://www.opensearch.org/Specifications/OpenSearch/Extensions/Geo/
 ###Time range
 Select by time range
 ```
-time={ISO8601 time range}
+time={ISO8601 time range with double dash option}
 E.g.
-time=2007-03-01T13:00:00Z/2008-05-11T15:30:00Z
+time=2007-03-01T13:00:00Z--2008-05-11T15:30:00Z
 ```
 
 ##Time interpolation
