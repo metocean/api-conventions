@@ -1,13 +1,16 @@
 # api-conventions
 # Query components
-This follows http://www.opensearch.org/Specifications/OpenSearch/Extensions/Geo/1.0/Draft_2 with some extensions. Ordering is consistent with WMS. Longitudes must be in the interval -180.<lon<=180.
+This follows http://www.opensearch.org/Specifications/OpenSearch/Extensions/Geo/1.0/Draft_2 with some extensions. Ordering is consistent with WMS. Longitudes must be in the interval -180.<=lon<=180.
+All intervals include the endpoints.
 ##Time selection
 ###Time range
 Select by time range
 ```
-time={ISO8601 time range with double dash option}
+time={ISO8601 time range with double dash option and empty start/end allowed}
 E.g.
 time=2007-03-01T13:00:00Z--2008-05-11T15:30:00Z
+time=2007-03-01T13:00:00Z--
+time=--2008-05-11T15:30:00Z
 ```
 
 ##Time interpolation
@@ -53,15 +56,17 @@ E.g.:
 lon=165.5&lat=-34.5&radius=10000
 ```
 
-##Geographical extraction/interpolation
-###Point
-Interpolate onto single point
+##Variable selection
+###Select by variable
+Use CF convention ids (no capitalisations)
 ```
-lon={decimal longitude}&lat={decimal latitiude}
-E.g.:
-lon=165.5&lat=-34.5
+vars=[cf_variable_ids]
+E.g.
+vars=significant_wave_height_at_sea_surface,surface_water_velocity_assuming_no_tide
 ```
 
+
+##Geographical extraction/interpolation
 ###Series of points
 Interpolate onto series of points
 ```
