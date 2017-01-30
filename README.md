@@ -1,6 +1,6 @@
 # api-conventions
 # Query components
-This follows http://www.opensearch.org/Specifications/OpenSearch/Extensions/Geo/1.0/Draft_2 with some extensions. Ordering is consistent with WMS. Longitudes must be in the interval -180.<lon<=360.
+This follows http://www.opensearch.org/Specifications/OpenSearch/Extensions/Geo/1.0/Draft_2 with some extensions. Ordering is consistent with WMS. Longitudes must be in the interval -180.<lon<=180.
 ##Time selection
 ###Time range
 Select by time range
