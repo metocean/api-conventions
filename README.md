@@ -1,4 +1,7 @@
 # api-conventions
+# Versioning
+All APIs must use a version base path. This allows for graceful upgrades later on. 
+
 # Query components
 This follows http://www.opensearch.org/Specifications/OpenSearch/Extensions/Geo/1.0/Draft_2 with some extensions. Ordering is consistent with WMS. Longitudes must be in the interval -180.<=lon<=180.
 All intervals include the endpoints.
