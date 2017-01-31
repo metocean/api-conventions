@@ -6,6 +6,7 @@ E.g.
 http://myserver:1111/v0/object/{object_id}
 http://myserver:1111/v1/object/{object_id}
 ```
+All API design and configuration must allow for parallel deployment of more than one version.
 
 # Query components
 This follows http://www.opensearch.org/Specifications/OpenSearch/Extensions/Geo/1.0/Draft_2 with some extensions. Ordering is consistent with WMS. Longitudes must be in the interval -180.<=lon<=180.
