@@ -62,7 +62,7 @@ Use CF convention ids (no capitalisations)
 ```
 vars=[cf_variable_ids]
 E.g.
-vars=significant_wave_height_at_sea_surface,surface_water_velocity_assuming_no_tide
+vars=sea_surface_wave_significant_height,eastward_sea_water_velocity_assuming_no_tide
 ```
 
 
