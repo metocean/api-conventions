@@ -73,6 +73,20 @@ vars=[cf_variable_ids]
 E.g.
 vars=sea_surface_wave_significant_height,eastward_sea_water_velocity_assuming_no_tide
 ```
+##Cycle selection
+###Select by specific cycle
+```
+cycle={ISO8601 cycle time} (If omitted should default to latest)
+E.g.
+cycle=20170201T000000Z
+```
+
+###Select by previous cycle
+```
+cycle_past={index of preceding cycle} (Starting with 0 index on latest and counting backwards)
+E.g.
+cycle_past=1 (For cycle before latest)
+```
 
 
 ##Geographical extraction/interpolation
