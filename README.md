@@ -121,3 +121,19 @@ lev={level in dataset units}
 E.g.:
 lev=100
 ```
+
+#Mime types
+APIs must include correct MIME tyeps in their responses and these correspond to the internal definitions used by the MDS.
+Accepted types include [all standard media types](http://www.iana.org/assignments/media-types/media-types.xhtml) and the following extensions:
+
+* application/x-netcdf
+* application/x-netcdf4
+* application/x-grib
+* application/x-grib2
+* text/x-swan-spectra
+
+These can be added to for specific formats. Note that the 'x' prefix is convention for an extended type.
+
+Note CF-JSON is is just a specification within JSON and has standard mime type of application/json.
+
+
