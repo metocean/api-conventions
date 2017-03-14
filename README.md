@@ -122,7 +122,7 @@ E.g.:
 lev=100
 ```
 
-#Mime types
+# Mime types
 APIs must include correct MIME tyeps in their responses and these correspond to the internal definitions used by the MDS.
 Accepted types include [all standard media types](http://www.iana.org/assignments/media-types/media-types.xhtml) and the following extensions:
 
