@@ -15,7 +15,7 @@ All intervals include the endpoints.
 ### Time range
 Select by time range
 ```
-time={ISO8601 time range with double dash option and empty start/end allowed}
+time={ISO8601 time interval with double dash option and empty start/end allowed}
 E.g.
 time=2007-03-01T13:00:00Z--2008-05-11T15:30:00Z
 time=2007-03-01T13:00:00Z--
@@ -23,14 +23,6 @@ time=--2008-05-11T15:30:00Z
 ```
 
 ## Time interpolation
-### Time
-Interpolate for single time
-```
-time={ISO8601 time}
-E.g: 
-time=2007-03-01T13:00:00Z
-```
-
 ### Times
 Interpolate for a series of discrete times
 ```
@@ -43,9 +35,9 @@ times=2007-03-01T13:00:00Z,2008-05-11T15:30:00Z
 Interpolate for a regularly spaced time series
 Time range with interval
 ```
-time={ISO8601 time range}&interval={ISO8601 duration}
+times={ISO8601 time range with intervals}
 E.g.:
-time=2007-03-01T13:00:00Z/2008-05-11T15:30:00Z&interval=PT3H
+times=R13--2014-01-01T00:00:00--PT3H  (means get 13 timesteps of 3 Hour interval starting at 2014-01-01 00:00:00)
 ```
 
 ## Geographical selection
