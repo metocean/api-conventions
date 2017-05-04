@@ -133,4 +133,6 @@ These can be added to for specific formats. Note that the 'x' prefix is conventi
 
 Note CF-JSON is is just a specification within JSON and has standard mime type of application/json.
 
+Where an endpoint supports ,multiple MIME types, the requested type should be specified in the 'Content-Type' header of the request.
+
 
