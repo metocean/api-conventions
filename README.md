@@ -123,15 +123,17 @@ lev=100
 APIs must include correct MIME tyeps in their responses and these correspond to the internal definitions used by the MDS.
 Accepted types include [all standard media types](http://www.iana.org/assignments/media-types/media-types.xhtml) and the following extensions:
 
-* application/x-netcdf
-* application/x-netcdf4
-* application/x-grib
-* application/x-grib2
-* text/x-swan-spectra
+* application/vnd.metocean.grib+binary
+* application/vnd.metocean.netcdf+binary
+* application/vnd.metocean.grib2+binary
+* application/vnd.metocean.netcdf4+binary
+* application/vnd.metocean.cf+json
+* text/vnd.metocean.spectra.swan+plain
+* text/vnd.metocean.spectra.octopus+plain
 
-These can be added to for specific formats. Note that the 'x' prefix is convention for an extended type.
+These can be added and or subtyped for specific formats
 
-Note CF-JSON is is just a specification within JSON and has standard mime type of application/json.
+Note CF-JSON is is just a specification within JSON, and is specified as above to differentiate it from any other arbitrary JSON which would be application/json.
 
 Where an endpoint supports ,multiple MIME types, the requested type should be specified in the 'Content-Type' header of the request.
 
