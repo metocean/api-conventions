@@ -123,10 +123,10 @@ lev=100
 APIs must include correct MIME tyeps in their responses and these correspond to the internal definitions used by the MDS.
 Accepted types include [all standard media types](http://www.iana.org/assignments/media-types/media-types.xhtml) and the following extensions:
 
-* application/vnd.metocean.grib+binary
-* application/vnd.metocean.netcdf+binary
-* application/vnd.metocean.grib2+binary
-* application/vnd.metocean.netcdf4+binary
+* application/vnd.wmo.grib+binary
+* application/vnd.unidata.netcdf+binary
+* application/vnd.wmo.grib2+binary
+* application/vnd.unidata.netcdf4+binary
 * application/vnd.metocean.cf+json
 * text/vnd.metocean.spectra.swan+plain
 * text/vnd.metocean.spectra.octopus+plain
