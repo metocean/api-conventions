@@ -135,6 +135,9 @@ These can be added and or subtyped for specific formats
 
 Note CF-JSON is is just a specification within JSON, and is specified as above to differentiate it from any other arbitrary JSON which would be application/json.
 
+Optionally, a cf suffix can be added to netcdf to indicate that it is cf compliant:
+* application/vnd.unidata.netcdf.cf+binary
+
 Where an endpoint supports ,multiple MIME types, the requested type should be specified in the 'Content-Type' header of the request.
 
 
