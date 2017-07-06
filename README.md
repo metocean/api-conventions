@@ -126,7 +126,6 @@ Accepted types include [all standard media types](http://www.iana.org/assignment
 * application/vnd.wmo.grib+binary
 * application/vnd.unidata.netcdf+binary
 * application/vnd.wmo.grib2+binary
-* application/vnd.unidata.netcdf4+binary
 * application/vnd.metocean.cf+json
 * text/vnd.metocean.spectra.swan+plain
 * text/vnd.metocean.spectra.octopus+plain
