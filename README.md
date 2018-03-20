@@ -49,7 +49,7 @@ times=R13--2014-01-01T00:00:00--PT3H  (means get 13 timesteps of 3 Hour interval
 ### Bounding box
 Select by bounding box.
 ```
-bbox={W,S,E,N as decimal longitude and latitudes}
+bbox={W,S,E,N as decimal longitudes and latitudes}
 E.g.:
 bbox=165.0,-40.0,180.0,-35.0
 ```
@@ -57,7 +57,7 @@ bbox=165.0,-40.0,180.0,-35.0
 ### Point and radius
 Select by point and radius
 ```
-lon={decimal longitude}&lat={decimal latitiude}&radius={radius in meters}
+lon={decimal longitude}&lat={decimal latitude}&radius={radius in meters}
 E.g.:
 lon=165.5&lat=-34.5&radius=10000
 ```
@@ -73,16 +73,16 @@ vars=sea_surface_wave_significant_height,eastward_sea_water_velocity_assuming_no
 ## Cycle selection
 ### Select by specific cycle
 ```
-cycle={ISO8601 cycle time} (If omitted should default to latest)
+cycle={ISO8601 cycle time} (if omitted should default to latest)
 E.g.
 cycle=20170201T000000Z
 ```
 
 ### Select by previous cycle
 ```
-cycle_past={index of preceding cycle} (Starting with 0 index on latest and counting backwards)
+cycle_past={index of preceding cycle} (starting with 0 index on latest and counting backwards)
 E.g.
-cycle_past=1 (For cycle before latest)
+cycle_past=1 (for cycle before latest)
 ```
 
 
@@ -90,7 +90,7 @@ cycle_past=1 (For cycle before latest)
 ### Series of points
 Interpolate onto series of points
 ```
-lons=[decimal longitudes]&lats=[decimal latitiude]
+lons=[decimal longitudes]&lats=[decimal latitudes]
 E.g.:
 lons=165.5,170.2,180.4&lats=-34.5,-36.0,-40.2
 ```
@@ -119,8 +119,8 @@ E.g.:
 lev=100
 ```
 
-# Mime types
-APIs must include correct MIME tyeps in their responses and these correspond to the internal definitions used by the MDS.
+# MIME types
+APIs must include correct MIME types in their responses and these correspond to the internal definitions used by the MDS.
 Accepted types include [all standard media types](http://www.iana.org/assignments/media-types/media-types.xhtml) and the following extensions:
 
 * application/vnd.wmo.grib+binary
@@ -132,11 +132,11 @@ Accepted types include [all standard media types](http://www.iana.org/assignment
 
 These can be added and or subtyped for specific formats
 
-Note CF-JSON is is just a specification within JSON, and is specified as above to differentiate it from any other arbitrary JSON which would be application/json.
+Note CF-JSON is just a specification within JSON, and is specified as above to differentiate it from any other arbitrary JSON which would be application/json.
 
 Optionally, a cf suffix can be added to netcdf to indicate that it is cf compliant:
 * application/vnd.unidata.netcdf.cf+binary
 
-Where an endpoint supports ,multiple MIME types, the requested type should be specified in the 'Content-Type' header of the request.
+Where an endpoint supports multiple MIME types, the requested type should be specified in the 'Content-Type' header of the request.
 
 
