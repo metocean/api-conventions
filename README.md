@@ -13,6 +13,10 @@ POST creates new, rejects edit
 PUT creates new or replaces
 PATCH edits
 
+# HTTP status / repsonse codes:
+
+https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
+
 # Query components
 This follows http://www.opensearch.org/Specifications/OpenSearch/Extensions/Geo/1.0/Draft_2 with some extensions. Ordering is consistent with WMS. Longitudes must be in the interval -180.<=lon<=180.
 All intervals include the endpoints.
