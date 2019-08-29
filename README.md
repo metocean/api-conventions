@@ -141,6 +141,6 @@ Note CF-JSON is just a specification within JSON, and is specified as above to d
 Optionally, a cf suffix can be added to netcdf to indicate that it is cf compliant:
 * application/vnd.unidata.netcdf.cf+binary
 
-Where an endpoint supports multiple MIME types, the requested type should be specified in the 'Content-Type' header of the request.
+Where an endpoint supports multiple MIME types, if the client desires a specific type, this should be specified in the 'Content-Type' header of the request. To make interactive use easier (e.g., when debugging with browsers or command-line tools), APIs should also accept a request header of 'Accept: */*'. If there is no obvious choice among multiple possible response types, preference in this case should be given to human-readable types if supported.
 
 
