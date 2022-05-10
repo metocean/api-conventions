@@ -1,4 +1,4 @@
-# MetOcean API conventions, version 1.0.0
+# MetOcean API conventions, version 1.1.0
 # Versioning
 All APIs must use a version base path. This allows for graceful upgrades later on.
 ```
@@ -30,6 +30,10 @@ time=2007-03-01T13:00:00Z--2008-05-11T15:30:00Z
 time=2007-03-01T13:00:00Z--
 time=--2008-05-11T15:30:00Z
 ```
+
+Both start and end times are included.
+Note that concatenating adjacent time ranges from separate queries may therefore lead to duplicate time stamps.
+
 
 ## Time interpolation
 ### Times
