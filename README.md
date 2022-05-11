@@ -1,4 +1,4 @@
-# MetOcean API conventions, version 1.0.1
+# MetOcean API conventions, version 1.1.1
 # Versioning
 All APIs must use a version base path. This allows for graceful upgrades later on.
 ```
@@ -147,7 +147,7 @@ Optionally, a cf suffix can be added to netcdf to indicate that it is cf complia
 * application/vnd.unidata.netcdf.cf+binary
 
 Where an endpoint supports multiple MIME types, if the client desires a specific type, this should be specified in the 'Content-Type' header of the request.
-To make interactive use easier (e.g., when debugging with browsers or command-line tools), APIs should also accept a request header of 'Accept: */*'.
+To make interactive use easier (e.g., when debugging with browsers or command-line tools), APIs should also accept a request header of `Accept: */*`.
 If there is no obvious choice among multiple possible response types, preference in this case should be given to human-readable types if supported.
 
 
