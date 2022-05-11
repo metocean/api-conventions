@@ -1,4 +1,4 @@
-# MetOcean API conventions, version 1.1.0
+# MetOcean API conventions, version 1.0.1
 # Versioning
 All APIs must use a version base path. This allows for graceful upgrades later on.
 ```
