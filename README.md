@@ -143,4 +143,32 @@ Optionally, a cf suffix can be added to netcdf to indicate that it is cf complia
 
 Where an endpoint supports multiple MIME types, the requested type should be specified in the 'Content-Type' header of the request.
 
+# Pagination
+Pagination should be implemented when it's necessary to limit the number of data points returned on a single request, usually this is necessary when the amount of data being returned/processed, exceeds the acceptable time/resources limits of a given API implementation. 
 
+## Query string: limit & offset
+
+The current proposed solution is to introduce 2 query paramaters to control the size and iteration of each "page": `limit` and `offset`, where the `limit` is the maximum number of records is expected to be returned and `offset` the starting point where to count `limit` from. 
+
+For example, let's suppose that there's a total of 1000 data points returned from a certain query, but we user want to fetch only every 100 points, the first query would be:
+
+```
+?limit=100&offset=0&...
+```
+Would return the first 100 records. Then the second "page" query:
+
+```
+?limit=100&offset=100&...
+```
+Returning data-points from 100-200
+
+This assumes that there's an default order of data-points, which in our case is usually `time` for metocean data, but could be that the query is orderd by ID, which could be a number or a string.
+
+## Header Link helpers
+
+The initial suggestion is that is provided helper Links in the headers to facilitate iteration through the pages following the :
+
+```
+Link: <{protocol}://{host}/{endpoint}/?...&limit=100&offset=200>; rel="next", <{protocol}://{host}/{endpoint}/?...&limit=100&offset=0>; rel="prev"
+```
+Where "prev" (previous) link can (or should?) be omitted in the first page and "next" omitted in the second page.
