@@ -31,7 +31,9 @@ time=2007-03-01T13:00:00Z--
 time=--2008-05-11T15:30:00Z
 ```
 
-Note that since all intervals include the endpoints (as stated above), concatenating adjacent time ranges from separate queries may lead to duplicate time stamps.
+As stated above, all intervals include the endpoints, so in this case {start} <= time <= {end}.
+So if available, data for both the start and end time should be returned.
+Concatenating adjacent time ranges from separate queries may therefore lead to duplicate time stamps.
 
 
 ## Time interpolation
