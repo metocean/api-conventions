@@ -19,7 +19,7 @@ https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
 
 # Query components
 This follows http://www.opensearch.org/Specifications/OpenSearch/Extensions/Geo/1.0/Draft_2 with some extensions. Ordering is consistent with WMS. Longitudes must be in the interval -180.<=lon<=180.
-All intervals include the endpoints.
+All intervals include the endpoints (mathematically speaking, they are "closed intervals").
 ## Time selection
 ### Time range
 Select by time range
@@ -31,8 +31,7 @@ time=2007-03-01T13:00:00Z--
 time=--2008-05-11T15:30:00Z
 ```
 
-Both start and end times are included.
-Note that concatenating adjacent time ranges from separate queries may therefore lead to duplicate time stamps.
+Note that since all intervals include the endpoints (as stated above), concatenating adjacent time ranges from separate queries may lead to duplicate time stamps.
 
 
 ## Time interpolation
