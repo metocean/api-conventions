@@ -1,4 +1,4 @@
-# MetOcean API conventions, version 1.1.0
+# MetOcean API conventions, version 1.1.1
 # Versioning
 All APIs must use a version base path. This allows for graceful upgrades later on.
 ```
@@ -19,7 +19,7 @@ https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
 
 # Query components
 This follows http://www.opensearch.org/Specifications/OpenSearch/Extensions/Geo/1.0/Draft_2 with some extensions. Ordering is consistent with WMS. Longitudes must be in the interval -180.<=lon<=180.
-All intervals include the endpoints.
+All intervals include the endpoints (mathematically speaking, they are "closed intervals").
 ## Time selection
 ### Time range
 Select by time range
@@ -30,6 +30,11 @@ time=2007-03-01T13:00:00Z--2008-05-11T15:30:00Z
 time=2007-03-01T13:00:00Z--
 time=--2008-05-11T15:30:00Z
 ```
+
+As stated above, all intervals include the endpoints, so in this case {start} <= time <= {end}.
+So if available, data for both the start and end time should be returned.
+Concatenating adjacent time ranges from separate queries may therefore lead to duplicate time stamps.
+
 
 ## Time interpolation
 ### Times
@@ -142,7 +147,7 @@ Optionally, a cf suffix can be added to netcdf to indicate that it is cf complia
 * application/vnd.unidata.netcdf.cf+binary
 
 Where an endpoint supports multiple MIME types, if the client desires a specific type, this should be specified in the 'Content-Type' header of the request.
-To make interactive use easier (e.g., when debugging with browsers or command-line tools), APIs should also accept a request header of 'Accept: */*'.
+To make interactive use easier (e.g., when debugging with browsers or command-line tools), APIs should also accept a request header of `Accept: */*`.
 If there is no obvious choice among multiple possible response types, preference in this case should be given to human-readable types if supported.
 
 
